@@ -1,0 +1,7 @@
+- type: Entity
+  id: StickyResin
+  description: "A layer of disgusting sticky slime."
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall

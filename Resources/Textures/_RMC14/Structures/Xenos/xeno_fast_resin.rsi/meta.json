@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from cmss13 wiki at https://cm-ss13.com/wiki/File:Resin_fast.png",
+    "size": {
+      "x": 64,
+      "y": 64
+    },
+    "states": [
+      {
+        "name": "fast_resin"
+      }
+    ]
+  }
