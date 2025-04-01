@@ -101,3 +101,6 @@
     evasion: 10
   - type: XenoInhands
     prefix: lesser
+  - type: HTN
+    rootTask:
+      task: LesserDroneCompound
