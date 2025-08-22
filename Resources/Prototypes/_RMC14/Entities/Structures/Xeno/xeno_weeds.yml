@@ -124,6 +124,7 @@
         damage:
           types:
             Heat: 4
+  - type: TileCleaner
 #  - type: Physics
 #    bodyType: Static
 #  - type: FootstepModifier

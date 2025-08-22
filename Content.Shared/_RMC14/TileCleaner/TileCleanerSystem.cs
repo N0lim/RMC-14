@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Decals;
 using Robust.Shared.GameObjects;
 
@@ -25,11 +26,12 @@ public sealed class TileCleanerSystem : EntitySystem
         //var decals = _decals.GetDecalsIntersecting(tile.GridUid, _lookupSystem.GetLocalBounds(tile, grid.TileSize).Enlarged(0.5f).Translated(new Vector2(-0.5f, -0.5f)));
         //if (args.Target)
         //    _decals.GetDecalsIntersecting(mainGridUid, aabb);
-        if (args.Entity is null)
+        if (args.Entity is null || args.Handled)
             return;
 
-        var ent = args.Entity ?? default;
-        _lookup.AnyLocalEntitiesIntersecting(ent, Box2.UnitCentered, EntityLookupSystem.DefaultFlags);
+        //var decal = args.Entity ?? default;
+        if (_lookup.GetEntitiesInRange<TileCleanerComponent>(args.Target, 0.5f).Any())
+            args.Handled = true;
     }
 
     private void OnInit(EntityUid uid, TileCleanerComponent comp, ComponentInit args)
